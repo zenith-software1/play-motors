@@ -1148,7 +1148,42 @@ footer {
     
     .price-card.featured { transform: scale(1); }
     .slider-handle { width: 45px; height: 45px; }
-}
+} /* [Zenith Safe-Code: Mobile UI Refinement] */
+@media (max-width: 768px) {
+    /* 1. Limpieza de etiquetas gigantes */
+    .ba-slider .before-label, 
+    .ba-slider .after-label {
+        font-size: 11px !important; 
+        padding: 4px 10px !important;
+        background: rgba(10, 10, 10, 0.85) !important; /* Deep Black con transparencia */
+        border: 1px solid #C41E3A !important; /* Borde Racing Red */
+        font-family: 'Inter', sans-serif !important;
+        bottom: 15px !important;
+        transition: opacity 0.4s ease !important;
+    }
+
+    /* 2. EFECTO GHOST: Las letras desaparecen al tocar la pantalla */
+    .ba-slider:active .before-label,
+    .ba-slider:active .after-label {
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    /* 3. Ajuste del control central (Handle) */
+    .ba-slider .handle {
+        width: 3px !important;
+    }
+
+    .ba-slider .handle::after {
+        width: 32px !important;
+        height: 32px !important;
+        margin-left: -16px !important;
+        margin-top: -16px !important;
+        background-color: #C41E3A !important; /* Racing Red oficial */
+        border: 2px solid #FFFFFF !important;
+    }
+       }
+   
 </style>
 </head>
 <body>
